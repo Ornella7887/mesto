@@ -1,4 +1,8 @@
 .profile__edit-button {
+  background-image: url("../../../images/Edit\ Button.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000000;
   width: 24px;
   height: 24px;
   margin-left: 18px;
