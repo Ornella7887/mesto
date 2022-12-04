@@ -2,7 +2,7 @@
   width: 150px;
   height: 50px;
   margin-left: auto;
-  background: url(../../../images/AddButton.png);
+  background: url(../../../images/add-button.svg);
   background-repeat: no-repeat;
   background-position: center;
   object-fit: contain;
@@ -13,12 +13,15 @@
 .profile__add-button:hover {
   opacity: 0.6;
 }
-
+@media screen and (max-width: 700px) {
+  .profile__add-button {
+    width: 110px;
+    margin: 36px 0 0 auto;
+  }
+}
 @media screen and (max-width: 568px) {
   .profile__add-button {
-    background: url(../../../images/AddButton2.png);
     width: 282px;
-    height: 50px;
     margin: 36px auto 0;
   }
 }

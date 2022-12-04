@@ -1,15 +1,15 @@
 .popup__close-button {
   width: 32px;
   height: 32px;
-  position: absolute;
-  background-image: url("../../../images/Close_Icon.png");
+  background-image: url("../../../images/close-icon.svg");
   background-position: center;
   border: 0;
   background-color: rgba(0, 0, 0, 0);
   background-repeat: no-repeat;
-  top: -40px;
-  right: -40px;
   cursor: pointer;
+  padding: 0;
+  margin-left: calc(100% - 32px);
+  margin-bottom: 8px;
 }
 .popup__close-button:hover {
   opacity: 0.6;
@@ -19,7 +19,7 @@
     width: 20px;
     height: 20px;
     margin-bottom: 16px;
-    right: 0;
+    margin-left: calc(100% - 20px);
     padding: 0;
   }
 }

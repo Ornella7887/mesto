@@ -6,8 +6,8 @@ let profileEditButtonElement = document.querySelector('.profile__edit-button');
 
 let popupContent = popupElement.querySelector('.popup__content');
 let formElement = popupContent.querySelector('.popup__form');
-let nameInput = popupContent.querySelector('.popup__input_name'); // Находим поля формы в DOM
-let jobInput = popupContent.querySelector('.popup__input_aboutyou'); // Находим поля формы в DOM
+let nameInput = popupContent.querySelector('.popup__input_form_name'); // Находим поля формы в DOM
+let jobInput = popupContent.querySelector('.popup__input_form_aboutyou'); // Находим поля формы в DOM
 let profileTitle = document.querySelector('.profile__title');
 let profileText = document.querySelector('.profile__text');
 

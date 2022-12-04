@@ -4,9 +4,10 @@
   line-height: 22px;
   font-weight: 400;
   color: #545454;
+  margin: 0;
 }
 @media screen and (max-width: 568px) {
-  .footer {
+  .footer__copyright {
     font-size: 14px;
     line-height: 17px;
   }

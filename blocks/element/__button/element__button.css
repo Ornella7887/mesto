@@ -3,13 +3,14 @@
   height: 19px;
   margin: 0;
   padding: 0;
-  background-image: url("../../../images/Heart.svg");
+  background-image: url("../../../images/heart1.svg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   border: 0;
-  background-color: #ffffff;
-  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
 }
 .element__button:hover {
-  opacity: 0.6;
+  opacity: 0.5;
+  cursor: pointer;
 }
