@@ -2,11 +2,11 @@
   background-image: url("../../../images/edit-btn.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0);
   width: 24px;
   height: 24px;
   margin-left: 18px;
-  margin-top: 15px;
+  /* margin-top: 15px; */
   box-sizing: border-box;
   cursor: pointer;
   border: 1px solid #ffffff;
@@ -19,6 +19,6 @@
     width: 18px;
     height: 18px;
     margin-left: 15.25px;
-    margin-top: 36px;
+    /* margin-top: 36px; */
   }
 }
