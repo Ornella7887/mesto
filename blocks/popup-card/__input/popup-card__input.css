@@ -1,0 +1,14 @@
+.popup-card__input {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #C4C4C4;
+  margin-bottom: 30px;
+  padding: 0 0 13px 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.popup-card__input:nth-child(2) {
+  margin-bottom: 0px;
+}

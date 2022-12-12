@@ -1,0 +1,25 @@
+.popup-card__close-button {
+  width: 32px;
+  height: 32px;
+  background-image: url("../../../images/close-icon.svg");
+  background-position: center;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  padding: 0;
+  margin-left: calc(100% - 32px);
+  margin-bottom: 8px;
+}
+.popup-card__close-button:hover {
+  opacity: 0.6;
+}
+@media screen and (max-width: 568px) {
+  .popup-card__close-button {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 16px;
+    margin-left: calc(100% - 20px);
+    padding: 0;
+  }
+}

@@ -1,5 +1,7 @@
 .element {
+  position: relative;
   max-width: 282px;
   background-color: #ffffff;
+  list-style-type: none;
   border-radius: 10px;
 }

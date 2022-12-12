@@ -1,8 +1,12 @@
 .element__title {
+  max-width: 70%;
   font-style: normal;
   font-size: 24px;
   line-height: 29px;
   font-weight: 900;
   color: #000000;
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

@@ -1,0 +1,11 @@
+.popup-card__container {
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+@media screen and (max-width: 568px) {
+  .popup-card__container {
+    max-width: 282px;
+  }
+}
