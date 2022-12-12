@@ -87,6 +87,9 @@ const createCard = function(name, src, alt) {
     cardElement.querySelector('.element__delete-button').addEventListener('click', function (evt) {
       evt.target.closest('.element').remove(); // удаление карточки
     })
+    cardImage.addEventListener('click', function (evt) {
+      openPopupImage(src, alt);
+    });
     return cardElement;
 }
 
@@ -131,8 +134,7 @@ const openPopupCard = function() {
 const closePopupCard = function() {
     popupCardElement.classList.remove('popup-card_is-opened');
 }
-popupAddButtonElement.addEventListener('click', openPopupCard); // вешаем слушатель, по клику вызываем функцию
-popupCardCloseButtonElement.addEventListener('click', closePopupCard);
+popupCardCloseButtonElement.addEventListener('click', closePopupCard);// вешаем слушатель, по клику вызываем функцию
 
 function formCardSubmitHandler (evt) {
     evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
@@ -152,19 +154,17 @@ let popupImageContent = popupImageElement.querySelector('.popup-image__content')
 let popupPictureElement = popupImageContent.querySelector('.popup-image__picture');
 let popupFigcaptionElement = popupImageContent.querySelector('.popup-image__figcaption');
 
-функции
-const openPopupImage = function() {
-    popupImageElement.classList.add('popup-image_is-opened'); //добавляем модификатор
-    popupPictureElement.setAttribute('src', image);
-    popupCardText.textContent = text;
-    popupFigcaptionElement.setAttribute(text);
+// функции
 
-    popupPictureElement.value = cardImage.src;
-    popupFigcaptionElement.value = cardTitle.textContent;
+const openPopupImage = function() {
+  popupImageElement.classList.add('popup-image_is-opened'); //добавляем модификатор
+  popupPictureElement.value = cardImage.src;
+  popupFigcaptionElement.value = cardTitle.textContent;
 }
 
 const closePopupImage = function() {
     popupImageElement.classList.remove('popup-image_is-opened');
 }
+
 cardImage.addEventListener('click', openPopupImage); // вешаем слушатель, по клику вызываем функцию
 popupImageCloseButtonElement.addEventListener('click', closePopupImage);
