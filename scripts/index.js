@@ -32,7 +32,7 @@ const initialCards = [
       alt: 'Вид на берег зимнего озера'
     }
 ];
-// объявляем переменные
+// Переменные PopupEdit
 let popupElement = document.querySelector('.popup');//Делаем выборку DOM элементов
 let popupCloseButtonElement = popupElement.querySelector('.popup__close-button');
 let profileEditButtonElement = document.querySelector('.profile__edit-button');
@@ -44,7 +44,7 @@ let jobInput = popupContent.querySelector('.popup__input_form_aboutyou'); // Н�
 let profileTitle = document.querySelector('.profile__title');
 let profileText = document.querySelector('.profile__text');
 
-// PopupEdit
+// Функции PopupEdit
 const openPopup = function() {
     popupElement.classList.add('popup_is-opened'); //добавляем модификатор
     nameInput.value = profileTitle.textContent; // сохраняем значения полей
@@ -67,11 +67,13 @@ function formSubmitHandler (evt) {
 formElement.addEventListener('submit', formSubmitHandler);
 
 // ПР № 5
+// Переменные Template
 // Element
 const elements = document.querySelector('.elements');// куда будет добавляться template
 // Template
 const cardTemplate = document.querySelector('#element-template').content.querySelector('.element'); //что добавляем в качестве template
 
+// Функции Template
 const createCard = function(name, src, alt) {
     const cardElement = cardTemplate.cloneNode(true);
     const cardTitle = cardElement.querySelector('.element__title');
@@ -88,12 +90,14 @@ const createCard = function(name, src, alt) {
       evt.target.closest('.element').remove(); // удаление карточки
     })
     cardImage.addEventListener('click', function (evt) {
-      openPopupImage(src, alt);
+      openPopupImage();
+      popupPictureElement.src = evt.target.src;
+      popupFigcaptionElement.textContent = evt.target.closest('.element').querySelector('.element__title').textContent;
     });
     return cardElement;
 }
 
-// create initial card
+// Создаем initial card
 const createInitialCard = function (dataCard) {
     const name = dataCard.name;
     const src = dataCard.link;
@@ -102,8 +106,7 @@ const createInitialCard = function (dataCard) {
 
     return InitialCard;
 }
-
-  //rendering
+  //Rendering
 initialCards.forEach(function(dataCard) {
     const element = createInitialCard(dataCard);
     elements.append(element);
@@ -111,7 +114,7 @@ initialCards.forEach(function(dataCard) {
 
 //PopupAdd
 
-// объявляем переменные
+// Объявляем переменные
 let popupCardElement = document.querySelector('.popup-card');//Делаем выборку DOM элементов
 let popupCardCloseButtonElement = popupCardElement.querySelector('.popup-card__close-button');
 let popupAddButtonElement = document.querySelector('.profile__add-button');
@@ -123,7 +126,7 @@ let cardPlaceInput = popupCardContent.querySelector('.popup-card__input_form_abo
 let cardTitle = document.querySelector('.element__title');
 let cardImage = document.querySelector('.element__image');
 
-// функции
+// Функции
 const openPopupCard = function() {
     popupCardElement.classList.add('popup-card_is-opened'); //добавляем модификатор
     // cardTitle.textContent = text;
@@ -148,7 +151,7 @@ function formCardSubmitHandler (evt) {
 formCardElement.addEventListener('submit', formCardSubmitHandler);
 
 // Popup Image
-// объявляем переменные
+// Объявляем переменные
 let popupImageElement = document.querySelector('.popup-image');//Делаем выборку DOM элементов
 let popupImageCloseButtonElement = popupImageElement.querySelector('.popup-image__close-button');
 
@@ -156,17 +159,14 @@ let popupImageContent = popupImageElement.querySelector('.popup-image__content')
 let popupPictureElement = popupImageContent.querySelector('.popup-image__picture');
 let popupFigcaptionElement = popupImageContent.querySelector('.popup-image__figcaption');
 
-// функции
+// Функции
 
 const openPopupImage = function() {
   popupImageElement.classList.add('popup-image_is-opened'); //добавляем модификатор
-  popupPictureElement.src = cardImage.src;
-  popupFigcaptionElement.textContent = cardTitle.textContent;
 }
 
 const closePopupImage = function() {
     popupImageElement.classList.remove('popup-image_is-opened');
 }
-
 // cardImage.addEventListener('click', openPopupImage); // вешаем слушатель, по клику вызываем функцию
 popupImageCloseButtonElement.addEventListener('click', closePopupImage);

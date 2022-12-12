@@ -10,6 +10,7 @@
   padding: 0;
   margin-left: calc(100% - 32px);
   margin-bottom: 8px;
+  transition: opacity 0.8s;
 }
 .popup__close-button:hover {
   opacity: 0.6;
