@@ -4,32 +4,32 @@ const initialCards = [
     {
       name: 'Архыз',
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-      alt: 'Вид на долину Архыз'
+      alt: 'Архыз'
     },
     {
       name: 'Челябинская область',
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg',
-      alt: 'Зимний вид на лесное озеро'
+      alt: 'Челябинская область'
     },
     {
       name: 'Иваново',
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg',
-      alt: 'Вид на жилой массив в городе'
+      alt: 'Иваново'
     },
     {
       name: 'Камчатка',
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg',
-      alt: 'Вид на гору с плато'
+      alt: 'Камчатка'
     },
     {
       name: 'Холмогорский район',
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg',
-      alt: 'Железная дорога посреди леса'
+      alt: 'Холмогорский район'
     },
     {
       name: 'Байкал',
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg',
-      alt: 'Вид на берег зимнего озера'
+      alt: 'Байкал'
     }
 ];
 // Переменные PopupEdit
@@ -113,7 +113,6 @@ initialCards.forEach(function(dataCard) {
 });
 
 //PopupAdd
-
 // Объявляем переменные
 let popupCardElement = document.querySelector('.popup-card');//Делаем выборку DOM элементов
 let popupCardCloseButtonElement = popupCardElement.querySelector('.popup-card__close-button');
@@ -129,8 +128,6 @@ let cardImage = document.querySelector('.element__image');
 // Функции
 const openPopupCard = function() {
     popupCardElement.classList.add('popup-card_is-opened'); //добавляем модификатор
-    // cardTitle.textContent = text;
-    // cardImage.setAttribute('src', image);
     cardNameInput.value = cardTitle.textContent; // сохраняем значения полей
     cardPlaceInput.value = cardImage.src;
 }
@@ -166,7 +163,7 @@ const openPopupImage = function() {
 }
 
 const closePopupImage = function() {
-    popupImageElement.classList.remove('popup-image_is-opened');
+    popupImageElement.classList.remove('popup-image_is-opened'); // удаляем модификатор
 }
 // cardImage.addEventListener('click', openPopupImage); // вешаем слушатель, по клику вызываем функцию
 popupImageCloseButtonElement.addEventListener('click', closePopupImage);
