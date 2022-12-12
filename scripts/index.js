@@ -131,6 +131,8 @@ const openPopupCard = function() {
     cardNameInput.value = cardTitle.textContent; // сохраняем значения полей
     cardPlaceInput.value = cardImage.src;
 }
+popupAddButtonElement.addEventListener('click', openPopupCard);
+
 const closePopupCard = function() {
     popupCardElement.classList.remove('popup-card_is-opened');
 }
@@ -158,13 +160,13 @@ let popupFigcaptionElement = popupImageContent.querySelector('.popup-image__figc
 
 const openPopupImage = function() {
   popupImageElement.classList.add('popup-image_is-opened'); //добавляем модификатор
-  popupPictureElement.value = cardImage.src;
-  popupFigcaptionElement.value = cardTitle.textContent;
+  popupPictureElement.src = cardImage.src;
+  popupFigcaptionElement.textContent = cardTitle.textContent;
 }
 
 const closePopupImage = function() {
     popupImageElement.classList.remove('popup-image_is-opened');
 }
 
-cardImage.addEventListener('click', openPopupImage); // вешаем слушатель, по клику вызываем функцию
+// cardImage.addEventListener('click', openPopupImage); // вешаем слушатель, по клику вызываем функцию
 popupImageCloseButtonElement.addEventListener('click', closePopupImage);
